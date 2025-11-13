@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #f8fafc;
+}
+.app-header {
+  padding: 12px 16px;
+  background: #0ea5e9;
+  color: white;
+  border-bottom: 1px solid #0284c7;
+}
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+.subtitle { margin: 0; opacity: 0.9; }
+
+.app-main { position: relative; height: calc(100% - 110px); }
+#map { height: 100%; width: 100%; }
+
+.legend {
+  position: absolute; top: 12px; right: 12px; z-index: 1000;
+  background: white; border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 10px 12px; box-shadow: 0 6px 20px rgba(2, 6, 23, 0.12);
+}
+.legend h2 { margin: 0 0 8px; font-size: 14px; color: #0f172a; }
+.legend ul { margin: 0; padding-left: 18px; font-size: 13px; color: #334155; }
+.legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 999px; background: #ef4444; margin-right: 6px; }
+
+.app-footer { height: 60px; display: grid; place-items: center; font-size: 12px; color: #334155; }
+
+/* Popup form */
+.popup-container { min-width: 260px; max-width: 360px; }
+.popup-title { margin: 0 0 6px; font-weight: 700; font-size: 16px; }
+.popup-section { margin: 8px 0; }
+.category { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: 6px; margin: 6px 0; }
+.category label { font-weight: 600; color: #0f172a; }
+.ratings-row { display: flex; gap: 6px; }
+.rating-input { appearance: none; width: 28px; height: 28px; border-radius: 8px; border: 1px solid #cbd5e1; display: grid; place-items: center; cursor: pointer; background: #ffffff; }
+.rating-input:hover { border-color: #0ea5e9; }
+.rating-input[data-checked="true"] { background: #0ea5e9; color: white; border-color: #0284c7; }
+.rating-input span { font-size: 12px; }
+.actions { display: flex; gap: 8px; margin-top: 10px; }
+.button { padding: 8px 10px; border-radius: 8px; border: 1px solid #cbd5e1; background: #0ea5e9; color: white; cursor: pointer; font-weight: 600; }
+.button.secondary { background: white; color: #0f172a; }
+.stats { font-size: 12px; color: #334155; }
+.stats table { width: 100%; border-collapse: collapse; }
+.stats th, .stats td { text-align: left; padding: 3px 0; border-bottom: 1px dashed #e2e8f0; }
+
+/* Leaflet overrides */
+.leaflet-popup-content { margin: 10px 12px; }
+.leaflet-container a.leaflet-popup-close-button { color: #0f172a; }
